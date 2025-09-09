@@ -12,12 +12,10 @@ export default function getImagesByQuery(query) {
                       per_page: 36,
                     }
                   })
-    .then(response => {
-      // console.log('pix-data:', response.data.hits);
+    .then(response => {      
       return response.data.hits;
     })
-    .catch(error => {
-      // console.log(error);
+    .catch(() => {      
       return [];
     });    
 }

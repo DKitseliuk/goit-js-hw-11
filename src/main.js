@@ -20,11 +20,10 @@ const galleryUpd = (evt) => {
             render.hideLoader();
             if (images.length === 0) {
                 throw new Error('Invalid search query');
-            }
-            // console.log(images);            
+            }            
             render.createGallery(images);
         })
-        .catch(error => {
+        .catch(() => {
             iziToast.error({
                 message: 'Sorry, there are no images matching your search query. Please try again!',
                 position: "topRight",
@@ -33,4 +32,3 @@ const galleryUpd = (evt) => {
 }
 
 form.addEventListener('submit', galleryUpd);
-
