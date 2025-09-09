@@ -8,7 +8,7 @@ const form = document.querySelector('.form');
 
 const galleryUpd = (evt) => {
     evt.preventDefault();    
-    const keyWord = evt.target.elements['search-text'].value;    
+    const keyWord = evt.target.elements['search-text'].value.trim();    
     form.reset();
     if (!(keyWord)) return;
     
